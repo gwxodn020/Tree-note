@@ -22,7 +22,7 @@ export default function TreeEditor() {
   const [isPanelOpen, setIsPanelOpen] = useState(true);
 
   useEffect(() => {
-    authFetch(`http://localhost:4000/api/notes/${newNoteId}`)
+    authFetch(`https://port-0-tree-mcn00wcv7d3cdfae.sel5.cloudtype.app/api/notes/${newNoteId}`)
       .then(res => res.json())
       .then(data => {
         setTitle(data.title);
@@ -33,7 +33,7 @@ export default function TreeEditor() {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      authFetch(`http://localhost:4000/api/notes/${newNoteId}`, {
+      authFetch(`https://port-0-tree-mcn00wcv7d3cdfae.sel5.cloudtype.app/api/notes/${newNoteId}`, {
         method: 'PUT',
         body: JSON.stringify({ title, nodes, edges })
       });

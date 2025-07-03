@@ -35,7 +35,7 @@ export default function Sign() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:4000/api/signup', {
+      const response = await fetch('https://port-0-tree-mcn00wcv7d3cdfae.sel5.cloudtype.app/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
